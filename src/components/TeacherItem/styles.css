@@ -51,6 +51,12 @@
   justify-content: space-between;
 }
 
+.teacher-item footer p strong {
+  	  color: var(--color-primary);
+  	  font-size: 1.6rem;
+  	  display: block;
+}
+
 .teacher-item footer button {
   width: 20rem;
   height: 5.6rem;
@@ -74,7 +80,7 @@
 
   .teacher-item header,
   .teacher-item footer {
-    padding: 3.2rem
+    padding: 3.2rem;
   }
 
   .teacher-item > p {
@@ -87,7 +93,7 @@
   }
 
   .teacher-item footer button {
-    width: 24.5px;
+    width: 24.5rem;
     font-size: 1.6rem;
     justify-content: center;
 
