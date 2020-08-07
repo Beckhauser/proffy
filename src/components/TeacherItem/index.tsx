@@ -18,7 +18,7 @@ function TeacherItem() {
       <p>
         Entusiasta dos melhores metas da BotLane
             <br /><br />
-            Apaixonado por farmar a jungle do time e por feedar na botlane entregando partidas.
+            Apaixonado por farmar a jungle do time e por feedar na botlane entegando partidas.
           </p>
 
       <footer>
