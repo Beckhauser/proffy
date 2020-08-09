@@ -3,33 +3,54 @@ import React from 'react';
 import './styles.css';
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
+import api from '../../services/api';
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+
+}
+interface TeacherItemProps {
+  teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+
+  function createNewConnection() {
+    api.post('connections', {
+      user_id: teacher.id,
+    })
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://pbs.twimg.com/profile_images/1069690828375904263/SXs-5rMN_400x400.jpg" alt="Lucas" />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Lucas Beckhauser</strong>
-          <span>League of Legends</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
 
-      <p>
-        Entusiasta dos melhores metas da BotLane
-            <br /><br />
-            Apaixonado por farmar a jungle do time e por feedar na botlane entregando partidas.
-          </p>
+      <p> {teacher.bio} </p>
 
       <footer>
         <p>
           Preço/hora
-              <strong> R$ 10,00</strong>
+          <strong>R$ {teacher.cost} </strong>
         </p>
-        <button>
+        <a
+          target="_blank"
+          onClick={createNewConnection}
+          href={`https://wa.me/${teacher.whatsapp}`}>
           <img src={whatsappIcon} alt="Whatsapp" />
               Entrar em contato
-            </button>
+            </a >
       </footer>
 
     </article>
