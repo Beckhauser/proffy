@@ -13,7 +13,7 @@
 </p>
 
 <p id="insomniaButton" align="center">
-  <a href="" target="_blank">
+  <a href="https://insomnia.rest/run/?label=Proffy%20API%20-%20Beckhauser&uri=https%3A%2F%2Fgithub.com%2FBeckhauser%2FProffy%2Fblob%2Fmaster%2FInsomnia.json" target="_blank">
   <img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia">
   </a>
 </p>
